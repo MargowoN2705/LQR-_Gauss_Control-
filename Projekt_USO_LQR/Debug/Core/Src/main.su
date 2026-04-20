@@ -1,0 +1,11 @@
+../Core/Src/main.c:165:5:_write	24	static
+../Core/Src/main.c:170:7:Read_Current_INA237	40	static
+../Core/Src/main.c:186:7:Read_Position	16	static
+../Core/Src/main.c:202:8:KalmanFilter_Update	312	static
+../Core/Src/main.c:359:7:Read_SetPoint	4	static
+../Core/Src/main.c:364:7:IIR_Filter	40	static
+../Core/Src/main.c:384:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:391:6:print_float	48	static
+../Core/Src/main.c:402:5:main	64	static
+../Core/Src/main.c:527:6:SystemClock_Config	96	static
+../Core/Src/main.c:580:6:Error_Handler	4	static,ignoring_inline_asm
