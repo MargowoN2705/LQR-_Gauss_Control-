@@ -3,7 +3,7 @@
 Projekt realizuje zaawansowany system sterowania położeniem wału silnika prądu stałego (DC) w architekturze **LQG (Linear Quadratic Gaussian)**. System łączy optymalną regulację kwadratową (LQR) z optymalną estymacją stanu (Filtrem Kalmana), co pozwala na precyzyjną kontrolę obiektu w warunkach szumu pomiarowego i ograniczonej dostępności zmiennych stanu.
 
 ## 1. Założenia Projektu
-[cite_start]System został zaprojektowany dla zestawu deweloperskiego **NUCLEO-L476RG** z procesorem **Arm Cortex-M4**[cite: 7, 11]. Głównym celem jest stabilizacja kąta obrotu wału silnika przy minimalizacji uchybu oraz energii sterowania.
+System został zaprojektowany dla zestawu deweloperskiego **NUCLEO-L476RG** z procesorem **Arm Cortex-M4**. Głównym celem jest stabilizacja kąta obrotu wału silnika przy minimalizacji uchybu oraz energii sterowania.
 
 **Kluczowe cechy:**
 * Pełna identyfikacja parametrów silnika na podstawie odpowiedzi skokowej.
@@ -47,13 +47,13 @@ Ponieważ system posiada tylko czujniki pozycji (enkoder) i prądu (sensor INA23
 Dzięki temu system dysponuje czystym sygnałem prędkości bez opóźnień typowych dla klasycznych filtrów dolnoprzepustowych.
 
 ## 5. Konfiguracja Sprzętowa
-[cite_start]Konfiguracja peryferiów została wykonana w środowisku STM32CubeMX[cite: 7].
+Konfiguracja peryferiów została wykonana w środowisku STM32CubeMX.
 
-* [cite_start]**Timer 2:** Generuje przerwania co 1 ms, taktując pętlę sterowania[cite: 297, 436].
-* **Timer 3:** Pracuje w trybie enkodera (piny PA6, PA7)[cite: 308, 426].
-* [cite_start]**Timer 4:** Generuje sygnał PWM (PB6) do sterowania mostkiem H[cite: 341, 426].
-* [cite_start]**I2C2:** Odczyt danych z sensora INA237 (400 kHz)[cite: 276, 426].
-* **USART2:** Telemetria danych sterownika (115200 bps)[cite: 392, 426].
+* **Timer 2:** Generuje przerwania co 1 ms, taktując pętlę sterowania.
+* **Timer 3:** Pracuje w trybie enkodera (piny PA6, PA7).
+* **Timer 4:** Generuje sygnał PWM (PB6) do sterowania mostkiem H.
+* **I2C2:** Odczyt danych z sensora INA237 (400 kHz).
+* **USART2:** Telemetria danych sterownika (115200 bps).
 
 ## 6. Wyniki i Analiza Przebiegów
 Wykresy przedstawiające zachowanie układu znajdują się w folderze `Multimedia/`.
